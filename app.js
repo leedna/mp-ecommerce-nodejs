@@ -17,5 +17,10 @@ app.get('/detail', function (req, res) {
 app.use(express.static('assets'));
  
 app.use('/assets', express.static(__dirname + '/assets'));
- 
-app.listen(3000);
+
+var port = process.env.PORT || 8080;
+
+//app.listen(3000);
+app.listen(port,function() {
+    console.log("app running on port 8080");
+ });
